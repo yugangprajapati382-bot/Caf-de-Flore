@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap');
+
+.cafe-pro {
+    width: 100%;
+    background: #deefff;
+    color: #8f3149;
+    font-family: "DM Sans", sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.cafe-pro * {
+    box-sizing: border-box;
+}
+
+.cafe-video-section {
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cafe-video-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    transition: transform 1s ease;
+}
+
+.cafe-video-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: url('./parallax-image.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: background 0.5s ease;
+}
+@media (max-width: 1200px) {
+    .cafe-video-overlay {
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 768px) {
+    .cafe-video-overlay {
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+    }
+}
+@media (max-width: 480px) {
+    .cafe-video-overlay {
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+    }
+}
+
+.cafe-video-play {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: none;
+    background: #800020;
+    color: white;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+    transition: all 0.4s ease;
+    animation: cafePlayPulse 2.5s infinite;
+}
+
+.cafe-video-play:hover {
+    background: #df4167;
+    transform: scale(1.12);
+    box-shadow: 0 0 40px rgba(223, 65, 103, 0.4);
+}
+
+.cafe-video-play svg {
+    margin-left: 5px;
+}
+
+.cafe-video-play.playing {
+    background: #df4167;
+    font-size: 30px;
+}
+
+@keyframes cafePlayPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(128, 0, 32, 0.3);
+    }
+
+    70% {
+        box-shadow: 0 0 0 20px rgba(128, 0, 32, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(128, 0, 32, 0);
+    }
+}
+
+.cafe-video-message {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 10, 10, 0.75);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    animation: cafeFadeIn 0.5s ease;
+}
+
+.cafe-video-message p {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(35px, 5vw, 70px);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.cafe-video-close {
+    background: #df4167;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cafe-video-close:hover {
+    background: white;
+    color: #df4167;
+}
+
+.cafe-testimonial-section {
+    width: 100%;
+    min-height: 540px;
+
+    background: #deefff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px 30px;
+    position: relative;
+    text-align: center;
+}
+
+.cafe-testimonial-heading {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(45px, 5vw, 65px);
+    font-weight: 400;
+    color: #df4167;
+
+    margin: 0 0 30px;
+    text-align: center;
+
+    transition: all 0.4s ease;
+}
+
+.cafe-testimonial-heading:hover {
+    letter-spacing: 3px;
+    transform: translateY(-3px);
+}
+
+.cafe-testimonial-container {
+    width: 100%;
+    max-width: 1200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.cafe-testimonial-content {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    animation: cafeTestimonialFade 0.7s ease;
+}
+
+.cafe-author-image {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    margin-bottom: 45px;
+
+    transition: all 0.4s ease;
+}
+
+.cafe-author-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.cafe-author-image:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(223, 65, 103, 0.2);
+}
+
+.cafe-author-image:hover img {
+    transform: scale(1.1);
+}
+
+.cafe-testimonial-quote {
+    max-width: 850px;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #8f3149;
+    margin: 0 0 25px;
+    transition: color 0.3s ease;
+}
+
+.cafe-testimonial-content:hover .cafe-testimonial-quote {
+    color: #df4167;
+}
+
+.cafe-testimonial-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.cafe-testimonial-author h3 {
+    font-size: 17px;
+    font-weight: 300;
+    color: #8f3149;
+    margin: 0;
+}
+
+.cafe-testimonial-author span {
+    font-size: 16px;
+    font-weight: 300;
+    color: #8f3149;
+}
+
+.cafe-testimonial-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: transparent;
+    border: none;
+
+    color: #df4167;
+    font-size: 30px;
+
+    cursor: pointer;
+    transition: all 0.4s ease;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cafe-testimonial-arrow.left {
+    left: 0;
+}
+
+.cafe-testimonial-arrow.right {
+    right: 0;
+}
+
+.cafe-testimonial-arrow:hover {
+    color: white;
+    transform: translateY(-50%) scale(1.2);
+
+    background: #df4167;
+    border-radius: 50%;
+
+    width: 45px;
+    height: 45px;
+}
+
+.cafe-gallery-section {
+    width: 100%;
+    min-height: 100vh;
+
+    background: #deefff;
+    padding: 40px 2.5%;
+}
+
+.cafe-gallery-grid {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-auto-rows: 350px;
+
+    gap: 35px 50px;
+}
+
+.cafe-gallery-item {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+
+    animation: cafeGalleryFade 1s ease;
+}
+
+.cafe-gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.8s ease,
+        filter 0.8s ease;
+}
+
+
+.cafe-gallery-item:hover img {
+    transform: scale(1.12);
+    filter: brightness(0.8);
+}
+
+
+.cafe-gallery-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(223, 65, 103, 0.25);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.cafe-gallery-item:hover .cafe-gallery-overlay {
+    opacity: 1;
+}
+
+.cafe-gallery-overlay span {
+    color: white;
+
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+
+    transform: translateY(20px);
+    transition: transform 0.5s ease;
+}
+
+.cafe-gallery-item:hover .cafe-gallery-overlay span {
+    transform: translateY(0);
+}
+
+.gallery-item-1 {
+    border-radius: 0;
+}
+
+.gallery-item-2 {
+    border-radius: 0;
+}
+
+.gallery-item-3 {
+    border-radius: 50% 50% 0 0;
+}
+
+.gallery-item-4 {
+    border-radius: 50%;
+}
+
+.gallery-item-5 {
+    border-radius: 0;
+}
+
+.cafe-back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 55px;
+    height: 55px;
+    border: 1px solid #df4167;
+    border-radius: 50%;
+    background: #deefff;
+    color: #df4167;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    text-decoration: none;
+    z-index: 1000;
+    transition: all 0.4s ease;
+}
+
+.cafe-back-to-top:hover {
+    background: #df4167;
+    color: white;
+    transform: translateY(-7px);
+}
+
+@keyframes cafeFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes cafeTestimonialFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cafeGalleryFade {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .cafe-video-section {
+        height: 75vh;
+    }
+
+    .cafe-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 280px;
+        gap: 25px;
+    }
+
+    .cafe-testimonial-quote {
+        font-size: 18px;
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .cafe-video-section {
+        height: 65vh;
+        min-height: 400px;
+    }
+
+    .cafe-video-play {
+        width: 85px;
+        height: 85px;
+        font-size: 28px;
+    }
+
+    .cafe-testimonial-section {
+        min-height: 500px;
+        padding: 50px 20px;
+    }
+
+    .cafe-testimonial-heading {
+        font-size: 45px;
+        margin-bottom: 25px;
+    }
+
+    .cafe-testimonial-container {
+        width: 100%;
+    }
+
+    .cafe-author-image {
+        width: 85px;
+        height: 85px;
+        margin-bottom: 30px;
+    }
+
+    .cafe-testimonial-quote {
+        font-size: 16px;
+        line-height: 1.8;
+        max-width: 500px;
+    }
+
+    .cafe-testimonial-arrow {
+        font-size: 25px;
+    }
+
+    .cafe-gallery-section {
+        padding: 30px 20px;
+    }
+
+    .cafe-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 250px;
+        gap: 20px;
+    }
+
+    .cafe-gallery-overlay span {
+        font-size: 20px;
+    }
+
+    .cafe-back-to-top {
+        right: 20px;
+        bottom: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .cafe-video-section {
+        height: 55vh;
+        min-height: 350px;
+    }
+
+    .cafe-testimonial-section {
+        padding: 40px 15px;
+    }
+
+    .cafe-testimonial-heading {
+        font-size: 38px;
+    }
+
+    .cafe-testimonial-quote {
+        font-size: 14px;
+        padding: 0 20px;
+    }
+
+    .cafe-testimonial-arrow.left {
+        left: -5px;
+    }
+
+    .cafe-testimonial-arrow.right {
+        right: -5px;
+    }
+
+    .cafe-gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 300px;
+        gap: 25px;
+    }
+
+    .cafe-gallery-item {
+        border-radius: 0;
+    }
+
+}

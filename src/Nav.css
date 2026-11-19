@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color:rgb(222, 238, 254);
+}
+
+.cafe-home {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #df4167;
+}
+
+.cafe-navbar {
+  width: 100%;
+  height: 260px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+}
+
+.cafe-socials {
+  position: absolute;
+  top: 42px;
+  right: 45px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cafe-socials a {
+  color: #df4167;
+  font-size: 17px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.cafe-socials a:hover {
+  color: #ffffff;
+  transform: translateY(-5px) scale(1.15);
+}
+
+.cafe-socials span {
+  width: 15px;
+  height: 1px;
+  background: #df4167;
+  transition: all 0.3s ease;
+}
+
+.cafe-socials:hover span {
+  width: 10px;
+}
+
+.cafe-logo {
+  position: absolute;
+  top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cafe-logo img {
+  width: 125px;
+  height: 110px;
+  object-fit: contain;
+  animation: flowerFloat 4s ease-in-out infinite;
+  transition: all 0.5s ease;
+}
+
+.cafe-logo img:hover {
+  transform: scale(1.12) rotate(10deg);
+  filter: drop-shadow(0 8px 12px rgba(223, 65, 103, 0.3));
+}
+
+@keyframes flowerFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.cafe-nav-menu {
+  position: absolute;
+  top: 185px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 65px;
+}
+
+.cafe-nav-link {
+  position: relative;
+  color: #8f3149;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 8px 0;
+  transition: all 0.4s ease;
+}
+
+.cafe-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #df4167;
+  transition: width 0.4s ease;
+}
+
+.cafe-nav-link:hover {
+  color: #df4167;
+  transform: translateY(-3px);
+}
+
+.cafe-nav-link:hover::after {
+  width: 100%;
+}
+
+.cafe-hero-content {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px 100px;
+  animation: heroFadeIn 1.2s ease forwards;
+}
+
+.cafe-hero-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(65px, 9vw, 130px);
+  font-weight: 400;
+  color: #df4167;
+  letter-spacing: -3px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  transition: all 0.5s ease;
+}
+
+.cafe-hero-content h1:hover {
+  letter-spacing: 1px;
+  transform: scale(1.02);
+}
+
+.cafe-hero-content p {
+  color: #8f3149;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  line-height: 1.8;
+  margin-bottom: 45px;
+}
+
+.cafe-discover-btn {
+  width: 175px;
+  height: 50px;
+  background: #df4167;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.cafe-discover-btn:hover {
+  background: #b92d50;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(223, 65, 103, 0.25);
+}
+
+.cafe-scroll-down {
+  position: absolute;
+  bottom: 35px;
+  color: #df4167;
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  animation: scrollBounce 2s infinite;
+  transition: all 0.3s ease;
+}
+
+.cafe-scroll-down:hover {
+  color: #b92d50;
+
+  transform: scale(1.2);
+}
+
+@keyframes scrollBounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+.cafe-menu-toggle {
+  display: none;
+
+  background: transparent;
+
+  border: none;
+
+  color: #df4167;
+
+  font-size: 28px;
+
+  cursor: pointer;
+
+  transition: transform 0.3s ease;
+}
+
+.cafe-menu-toggle:hover {
+  transform: rotate(90deg);
+}
+
+@media (max-width: 768px) {
+
+  .cafe-home {
+    min-height: 120vh;
+  }
+
+  .cafe-navbar {
+    height: 180px;
+  }
+
+  .cafe-logo {
+    top: 20px;
+  }
+
+  .cafe-logo img {
+    width: 100px;
+    height: 85px;
+  }
+
+  .cafe-socials {
+    top: 25px;
+    right: 20px;
+
+    gap: 10px;
+  }
+
+  .cafe-socials a {
+    font-size: 14px;
+  }
+
+  .cafe-socials span {
+    width: 8px;
+  }
+
+  .cafe-menu-toggle {
+    display: flex;
+    position: absolute;
+    left: 20px;
+    top: 28px;
+    z-index: 1002;
+  }
+
+  .cafe-nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #deefff;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      max-height 0.5s ease,
+      opacity 0.4s ease,
+      padding 0.4s ease;
+
+    z-index: 1001;
+  }
+
+  .cafe-nav-menu.active {
+    max-height: 350px;
+    opacity: 1;
+    visibility: visible;
+    padding: 30px 0;
+  }
+
+  .cafe-hero-content {
+    padding: 80px 20px 100px;
+  }
+
+  .cafe-hero-content h1 {
+    font-size: clamp(55px, 10vw, 85px);
+    letter-spacing: -1px;
+  }
+
+  .cafe-hero-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 500px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .cafe-home {
+    min-height: 120vh;
+  }
+
+  .cafe-navbar {
+    height: 150px;
+  }
+
+  .cafe-socials {
+    right: 12px;
+
+    gap: 8px;
+  }
+
+  .cafe-socials a {
+    font-size: 12px;
+  }
+
+  .cafe-socials span {
+    width: 6px;
+  }
+
+  .cafe-logo img {
+    width: 85px;
+    height: 70px;
+  }
+
+  .cafe-menu-toggle {
+    left: 12px;
+    top: 23px;
+    font-size: 24px;
+  }
+
+  .cafe-hero-content {
+    padding: 90px 15px 100px;
+  }
+
+  .cafe-hero-content h1 {
+    font-size: 55px;
+    letter-spacing: -1px;
+    line-height: 1.2;
+  }
+
+  .cafe-hero-content p {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .cafe-discover-btn {
+    width: 150px;
+
+    height: 45px;
+  }
+
+  .cafe-scroll-down {
+    bottom: 25px;
+
+    font-size: 28px;
+  }
+
+}

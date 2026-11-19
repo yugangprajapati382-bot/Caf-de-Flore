@@ -1,0 +1,173 @@
+.joy-section {
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url("./slider-image-1.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.joy-content {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+.joy-title {
+    font-family: Georgia, serif;
+    font-size: clamp(65px, 10vw, 135px);
+    font-weight: 400;
+    color: #e83e68;
+    margin: 0 0 15px;
+    animation: joyTitle 1.2s ease forwards;
+    transition: 0.5s ease;
+}
+
+.joy-title:hover {
+    transform: scale(1.05);
+    letter-spacing: 3px;
+    color: #d72e5b;
+}
+.joy-text {
+    font-size: 17px;
+    color: #a83e55;
+    letter-spacing: 1px;
+    line-height: 1.8;
+    margin: 0 0 45px;
+    animation: joyText 1.5s ease forwards;
+    transition: 0.4s ease;
+}
+
+.joy-text:hover {
+    letter-spacing: 2px;
+    color: #e83e68;
+}
+
+.joy-button {
+    width: 175px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e33d66;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+    animation: joyButton 1.8s ease forwards;
+}
+
+.joy-button:hover {
+    background: #222;
+    color: white;
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    letter-spacing: 2px;
+}
+.joy-scroll {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #e83e68;
+    font-size: 32px;
+    animation: joyScroll 1.5s infinite ease-in-out;
+    transition: 0.3s ease;
+}
+
+.joy-scroll:hover {
+    color: #222;
+    transform: translate(-50%, -8px);
+}
+
+@keyframes joyTitle {
+    from {
+        opacity: 0;
+        transform: translateY(70px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes joyText {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes joyButton {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes joyScroll {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+@media (max-width: 768px) {
+
+    .joy-section {
+        min-height: 600px;
+        background-size: cover;
+    }
+
+    .joy-title {
+        font-size: 65px;
+    }
+
+    .joy-text {
+        font-size: 14px;
+        margin-bottom: 35px;
+    }
+
+}
+@media (max-width: 480px) {
+
+    .joy-title {
+        font-size: 48px;
+    }
+
+    .joy-text {
+        font-size: 12px;
+        max-width: 320px;
+    }
+
+    .joy-button {
+        width: 150px;
+        height: 48px;
+    }
+
+}

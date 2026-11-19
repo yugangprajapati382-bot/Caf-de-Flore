@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap');
+
+.cafe-footer {
+    width: 100%;
+    min-height: 570px;
+    background-color: #deefff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    font-family: "DM Sans", sans-serif;
+    padding: 25px 20px 75px;
+}
+
+.footer-logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-logo img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    animation: flowerFloat 4s ease-in-out infinite;
+    transition: all 0.5s ease;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.2) rotate(15deg);
+
+    filter: drop-shadow(
+        0 8px 15px rgba(223, 65, 103, 0.3)
+    );
+}
+
+
+.footer-content {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    animation: footerFade 1.2s ease;
+}
+
+
+.footer-content h2 {
+    width: 100%;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 48px;
+    font-weight: 400;
+
+    color: #df4167;
+
+    text-align: center;
+
+    margin: 0 0 12px;
+
+    transition: all 0.4s ease;
+}
+
+.footer-content h2:hover {
+    color: #b92d50;
+
+    letter-spacing: 3px;
+
+    transform: translateY(-4px);
+}
+
+
+
+
+.footer-content p {
+    width: 100%;
+
+    font-size: 16px;
+    font-weight: 300;
+
+    color: #8f3149;
+
+    text-align: center;
+
+    margin: 0 0 50px;
+
+    line-height: 1.8;
+
+    transition: all 0.4s ease;
+}
+
+.footer-content p:hover {
+    color: #df4167;
+
+    letter-spacing: 0.5px;
+}
+
+
+
+.footer-socials {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+
+    margin: 0 auto;
+}
+
+
+/* Social Links */
+
+.footer-socials a {
+    width: 24px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #df4167;
+
+    font-size: 17px;
+
+    text-decoration: none;
+
+    transition: all 0.4s ease;
+}
+
+
+/* Social Hover */
+
+.footer-socials a:hover {
+    color: #ffffff;
+
+    background: #df4167;
+
+    border-radius: 50%;
+
+    transform: translateY(-7px) scale(1.15);
+
+    box-shadow: 0 5px 15px rgba(223, 65, 103, 0.2);
+}
+
+
+/* Social Lines */
+
+.footer-socials span {
+    width: 15px;
+    height: 1px;
+
+    background: #df4167;
+
+    transition: all 0.4s ease;
+}
+
+.footer-socials:hover span {
+    width: 10px;
+}
+
+
+@keyframes flowerFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes footerFade {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .cafe-footer {
+        min-height: 480px;
+
+        padding: 25px 15px 55px;
+
+        background-position: center;
+    }
+
+    .footer-logo img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .footer-content h2 {
+        font-size: 40px;
+    }
+
+    .footer-content p {
+        font-size: 14px;
+
+        margin-bottom: 35px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .cafe-footer {
+        min-height: 420px;
+
+        padding: 20px 12px 45px;
+
+        background-size: auto 100%;
+        background-position: center;
+    }
+
+    .footer-logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .footer-content h2 {
+        font-size: 34px;
+    }
+
+    .footer-content p {
+        font-size: 13px;
+
+        line-height: 1.7;
+
+        margin-bottom: 30px;
+    }
+
+    .footer-socials {
+        gap: 10px;
+    }
+
+    .footer-socials a {
+        font-size: 15px;
+    }
+
+    .footer-socials span {
+        width: 10px;
+    }
+
+}
+
+
+@media (max-width: 350px) {
+
+    .footer-content h2 {
+        font-size: 29px;
+    }
+
+    .footer-content p {
+        font-size: 12px;
+    }
+
+    .footer-socials {
+        gap: 7px;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .footer-logo img,
+    .footer-content {
+        animation: none;
+    }
+
+    .cafe-footer * {
+        transition: none !important;
+    }
+
+}

@@ -1,0 +1,482 @@
+/* GOOGLE FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap');
+
+
+/* MAIN */
+
+.some-page {
+    width: 100%;
+    overflow: hidden;
+    background: #deefff;
+    font-family: "DM Sans", sans-serif;
+}
+
+
+/* =================================
+   ABOUT HERO
+================================= */
+
+.some-hero {
+    width: 100%;
+    height: 100vh;
+    min-height: 550px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #deefff;
+
+    overflow: hidden;
+}
+
+.some-hero-background {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    inset: 0;
+
+    overflow: hidden;
+}
+
+.some-hero-background img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition: transform 1.2s ease;
+}
+
+.some-hero:hover .some-hero-background img {
+    transform: scale(1.04);
+}
+
+
+.some-hero::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.06);
+
+    z-index: 1;
+}
+
+.some-hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: white;
+    animation: someFadeUp 1.2s ease;
+}
+
+.some-small-title {
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    font-weight: 400;
+
+    color: white;
+
+    display: block;
+
+    margin-bottom: 15px;
+}
+
+
+.some-hero-content h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(75px, 9vw, 115px);
+
+    font-weight: 400;
+
+    margin: 0;
+
+    color: white;
+
+    transition: all 0.5s ease;
+}
+
+
+.some-hero-content h1:hover {
+    letter-spacing: 8px;
+
+    transform: scale(1.04);
+}
+
+
+/* TITLE LINE */
+
+.some-title-line {
+    width: 65px;
+
+    height: 2px;
+
+    background: white;
+
+    margin: 20px auto;
+
+    transition: width 0.5s ease;
+}
+
+.some-hero-content:hover .some-title-line {
+    width: 120px;
+}
+
+
+/* HERO DESCRIPTION */
+
+.some-hero-content p {
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 300;
+
+    letter-spacing: 0.5px;
+}
+.some-flower-left {
+    position: absolute;
+
+    left: -45px;
+
+    bottom: 0;
+
+    width: 230px;
+
+    z-index: 2;
+
+    object-fit: contain;
+
+    animation: someFloat 5s ease-in-out infinite;
+
+    transition: transform 0.6s ease;
+}
+
+
+.some-flower-left:hover {
+    transform: rotate(-12deg) scale(1.1);
+}
+
+
+.some-flower-right {
+    position: absolute;
+
+    right: -40px;
+
+    top: 30px;
+
+    width: 180px;
+
+    z-index: 2;
+
+    object-fit: contain;
+
+    animation: someFloat 6s ease-in-out infinite;
+
+    transition: transform 0.6s ease;
+}
+
+
+.some-flower-right:hover {
+    transform: rotate(15deg) scale(1.1);
+}
+.some-about-section {
+    width: 100%;
+
+    min-height: 700px;
+
+    padding: 100px 7%;
+
+    background-color: #deefff;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* CONTAINER */
+
+.some-about-container {
+    width: 100%;
+
+    max-width: 1200px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+.some-about-image {
+    width: 100%;
+
+    height: 480px;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    border: 1px solid #df4167;
+
+    transition: all 0.6s ease;
+}
+
+
+.some-about-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.8s ease;
+}
+
+
+.some-about-image:hover {
+    box-shadow: 0 20px 45px rgba(223, 65, 103, 0.2);
+
+    transform: translateY(-10px);
+}
+
+
+.some-about-image:hover img {
+    transform: scale(1.12);
+}
+
+
+
+.some-about-text {
+    color: #8f3149;
+}
+
+
+.some-about-text span {
+    color: #df4167;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+}
+
+
+.some-about-text h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    color: #df4167;
+
+    margin: 20px 0 25px;
+
+    transition: all 0.4s ease;
+}
+
+
+.some-about-text h2:hover {
+    letter-spacing: 2px;
+}
+
+
+.some-about-text p {
+    font-size: 16px;
+
+    font-weight: 300;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+
+    color: #8f3149;
+}
+
+
+.some-discover-btn {
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: white;
+
+    background: #df4167;
+
+    padding: 17px 35px;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    margin-top: 20px;
+
+    transition: all 0.4s ease;
+}
+
+
+.some-discover-btn:hover {
+    background: #8f3149;
+
+    color: white;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(143, 49, 73, 0.2);
+}
+
+@keyframes someFadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes someFloat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .some-hero {
+        height: 80vh;
+    }
+
+    .some-about-container {
+        gap: 40px;
+    }
+
+    .some-about-image {
+        height: 350px;
+    }
+
+    .some-flower-left {
+        width: 160px;
+    }
+
+    .some-flower-right {
+        width: 130px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .some-hero {
+        height: 75vh;
+        min-height: 450px;
+    }
+
+    .some-hero-content h1 {
+        font-size: 65px;
+    }
+
+    .some-hero-content p {
+        font-size: 13px;
+
+        padding: 0 20px;
+    }
+
+    .some-flower-left {
+        width: 110px;
+        left: -20px;
+    }
+
+    .some-flower-right {
+        width: 100px;
+        right: -20px;
+    }
+
+    .some-about-section {
+        padding: 70px 25px;
+    }
+
+    .some-about-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .some-about-image {
+        height: 330px;
+
+        max-width: 350px;
+
+        margin: auto;
+    }
+
+    .some-about-text {
+        text-align: center;
+    }
+
+    .some-about-text h2 {
+        font-size: 42px;
+    }
+
+    .some-about-text p {
+        font-size: 14px;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .some-flower-left,
+    .some-flower-right,
+    .some-hero-content {
+        animation: none;
+    }
+
+    .some-page * {
+        transition: none !important;
+    }
+
+}
